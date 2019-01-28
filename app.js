@@ -3,9 +3,10 @@ var CAMPAIGN_GOAL = 1000; // Your fundraising goal, in dollars
 
 // Initialize an Express app
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 app.use("/static", express.static(__dirname + '/static')); // Serve static files
-app.use(express.bodyParser()); // Can parse POST requests
+app.use(bodyParser()); // Can parse POST requests
 app.listen(1337); // The best port
 console.log("App running on http://localhost:1337");
 
